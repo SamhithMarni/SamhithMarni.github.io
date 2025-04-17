@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function add() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value = num1 + num2;
+    }
+
+    function sub() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value = num1 - num2;
+    }
+
+    function mul() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        document.form1.txtSum.value = num1 * num2;
+    }
+
+    function div() {
+        var num1, num2;
+        num1 = Number(document.form1.txtNum1.value);
+        num2 = Number(document.form1.txtNum2.value);
+        if (num2 !== 0) {
+            document.form1.txtSum.value = num1 / num2;
+        } 
+	else {
+            document.form1.txtSum.value = "cannot divide by 0";
+        }
+    }
+</script>
+</head>
+<body>
+
+<form name="form1">
+    Enter operand 1:
+    <input type="text" name="txtNum1" size=8><br><br>
+
+    Enter operand 2:
+    <input type="text" name="txtNum2" size=8><br><br>
+
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="sub()">
+    <input type="button" value="x" onclick="mul()">
+    <input type="button" value="/" onclick="div()"><br><br>
+
+    <input type="text" name="txtSum">
+</form>
+</body>
+</html>
